@@ -12,11 +12,11 @@ import org.springframework.context.ApplicationContext;
 public class DiDemoApplication {
 
     public static void main(String[] args) {
-         ApplicationContext ac =SpringApplication.run(DiDemoApplication.class, args);
+        ApplicationContext ac = SpringApplication.run(DiDemoApplication.class, args);
         MyController myController = (MyController) ac.getBean("myController");
-        myController.hello();
 
 
+        System.out.println(myController.hello());
         System.out.println(ac.getBean(PropertyInjectedController.class).sayHello());
         System.out.println(ac.getBean(SetterInjectedController.class).sayHello());
         System.out.println(ac.getBean(ConstructorInjectedController.class).sayHello());
